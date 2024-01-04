@@ -1,0 +1,30 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>按讚程式</title>
+</head>
+<body>
+
+  <h1>按讚程式</h1>
+  <p id="likeCount">讚: <span id="count">0</span></p>
+  <button id="likeButton" onclick="like()">讚</button>
+
+  <script>
+    let likeCount = 0;
+
+    function like() {
+      likeCount++;
+      updateLikeCount();
+      // 在這裡可以使用 AJAX 或 Fetch API 將按讚數據發送到後端
+    }
+
+    function updateLikeCount() {
+      document.getElementById('count').textContent = likeCount;
+    }
+  </script>
+
+</body>
+</html>
